@@ -31,5 +31,7 @@ cacheSolve <- function(x, ...) {
   if(nrow(cachedInv)==1 && ncol(cachedInv)==1 && is.na(cachedInv[1,1])) {
     x$setInv(solve(x$get()))
   }
+  
+  #return the matrix inverse
   x$getInv()
 }  
